@@ -1,11 +1,9 @@
 import loading_files as load
 
-
 dictionaries = load.load()
-
-
 dict_de = dictionaries[0]
 dict_en = dictionaries[1]
+
 def translate(word):
     if word in dict_de:
         return [dict_de[word][0], "de"]

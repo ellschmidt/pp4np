@@ -2,23 +2,14 @@ import loading_files as load
 import dic as translate
 import vocab
 import madlibstwo as mad
+import grammar
 dictionaries = load.load()
 dict_de = dictionaries[0]
 dict_en = dictionaries[1]
 
-#dictionaries = vocab.trainer(dictionaries)
-mad.madlib(dictionaries)
+grammar.grammar(dictionaries)
 
 '''
-
-# load vocab file
-# read dictionary file
-# check for new entries
-# add them to vocab file while creating entry-objects
-
-
-d1 = {'a': 100, 'b': 200, 'c':300}
-
 # "Begrüßung"
 # "Main Menü"
 
@@ -42,19 +33,19 @@ while input != "Exit!":
 			
 		elif input == "Vocab":
 			
-			vocab()
+			dictionaries = vocab.trainer(dictionaries)
 			
 			show.main_menu()
             
         elif input == "Grammar":
             
-            grammar()
+            grammar.grammar(dictionaries)
             
             show.main_menu()
             
         elif input == "MadLib":
             
-            mad()
+            mad.madlib(dictionaries)
             
             show.main_menu()
             
