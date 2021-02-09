@@ -7,8 +7,8 @@ def load():
     for line in vocab_file:
         word_entry = line.split(',')
         #print(word_entry)
-        dictionary_de[word_entry[0]] = (word_entry[2], word_entry[1], list(word_entry[3][:-1]))
-        dictionary_en[word_entry[2]] = (word_entry[0], word_entry[1], list(word_entry[3][:-1]))
+        dictionary_de[word_entry[0]] = (word_entry[2], word_entry[1], list(word_entry[3]))
+        dictionary_en[word_entry[2]] = (word_entry[0], word_entry[1], list(word_entry[4][:-1]))
     
     #print(dictionary_de)    
     for line in dictionary_file:
@@ -22,7 +22,7 @@ def load():
             vocab_entry = ""
             dictionary_de[word[0]] = [(word[1])[1:], (word[2])[1:-1], [0,0,0,"new"]]
             dictionary_en[word[1]] = [(word[0])[1:], (word[2])[1:-1], [0,0,0,"new"]]
-            vocab_entry = str(word[0]) + ',' + str((word[1])[1:]) + ',' + str((word[2])[1:-1]) + ',' + "000n"
+            vocab_entry = str(word[0]) + ',' + str((word[1])[1:]) + ',' + str((word[2])[1:-1]) + ',' + "000n" + ',' + "000n"
             vocab_file.write(vocab_entry)
             vocab_file.write('\n')
     
@@ -38,10 +38,16 @@ def update(dictionaries):
         line.append(dictionaries[0][entry][1])
         line.append(dictionaries[0][entry][0])
         #print(dictionaries[1][dictionaries[0][entry][0]][2][0])    
-        line.append((str(int(dictionaries[0][entry][2][0]) + int(dictionaries[1][dictionaries[0][entry][0]][2][0])) + 
-            str(int(dictionaries[0][entry][2][1]) + int(dictionaries[1][dictionaries[0][entry][0]][2][1])) + 
-            str(int(dictionaries[0][entry][2][2]) + int(dictionaries[1][dictionaries[0][entry][0]][2][2])) + 
-            str(dictionaries[0][entry][2][3])) + "\n") 
+        line.append(str(int(dictionaries[0][entry][2][0])) + 
+            str(int(dictionaries[0][entry][2][1])) + 
+            str(int(dictionaries[0][entry][2][2])) + 
+            str(dictionaries[0][entry][2][3]))
+        eng = dictionaries[0][entry][0]
+        
+        line.append((str(int(dictionaries[1][eng][2][0])) + 
+            str(int(dictionaries[1][eng][2][1])) + 
+            str(int(dictionaries[1][eng][2][2])) + 
+            str(dictionaries[1][eng][2][3])) + "\n")
         #print(line)    
         new_line = delimiter.join(line)    
         vocab_file.write(new_line)    

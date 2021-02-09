@@ -11,6 +11,7 @@ def trainer(dictionaries):
         if new_word == True:
             if update_counter == 0 or update_counter >= 10:
                 test_list = create_test_list(dictionaries)
+                update_counter = 0
             else:
                 pass
             
@@ -20,7 +21,6 @@ def trainer(dictionaries):
                 language = 0
             else: language = 1    
                   
-            dictionaries[language][test_word[0]][2][3] = "known"
             update_counter += 1
             print("What is the correct translation for the following word: " + test_word[0] + "?")
         
@@ -35,7 +35,7 @@ def trainer(dictionaries):
             print("The correct answer would be: " + test_word[1])
             pass
         elif answer == "xxx":
-            pass
+            break
         elif answer == test_word[1]:
             new_word = True
             dictionaries[language][test_word[0]][2][1] = int(dictionaries[language][test_word[0]][2][1]) + 1
@@ -46,7 +46,8 @@ def trainer(dictionaries):
             print("I'm sorry, that wasn't correct. Try again:")
         
         dictionaries[language][test_word[0]][2][0] = int(dictionaries[language][test_word[0]][2][0]) + 1
-        
+        dictionaries[language][test_word[0]][2][3] = "k"
+		
     return dictionaries
     
 def create_test_list(dictionaries):

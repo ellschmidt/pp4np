@@ -7,64 +7,64 @@ dictionaries = load.load()
 dict_de = dictionaries[0]
 dict_en = dictionaries[1]
 
-grammar.grammar(dictionaries)
+print("Begrüßung")
+print("------------")
+print("Main Menü")
+print("###################")
 
-'''
-# "Begrüßung"
-# "Main Menü"
+inp = ""
 
-
-while input != "Exit!":
+while inp != "Exit!":
 	
-	while input != "out":
+	inp = input()
+			
+	if inp == "1":
 		
-		if input == "Dic":
+		word_input = input("Type in a word: ")
+		translation = translate.translate(str(word_input))
+		if translation[1] == "de":
+			print(word_input + " in English is " + translation[0])
+		elif translation[1] == "en":
+			print(word_input + " in German is " + translation[0])
+		else:
+			pass
 			
-            word_input = input("Type in a word: ")
-            translation = translate.translate(str(word_input))
-            if translation[1] == "de":
-                print(word_input + " in English is " + translation[0])
-            elif translation[1] == "en":
-                print(word_input + " in German is " + translation[0])
-            else:
-                pass
-                
-			show.main_menu()
-			
-		elif input == "Vocab":
-			
-			dictionaries = vocab.trainer(dictionaries)
-			
-			show.main_menu()
-            
-        elif input == "Grammar":
-            
-            grammar.grammar(dictionaries)
-            
-            show.main_menu()
-            
-        elif input == "MadLib":
-            
-            mad.madlib(dictionaries)
-            
-            show.main_menu()
-            
-        elif input == "Stats":
-        
-            stats()
-            
-            show.main_menu()
-            
-        elif input == "Help":
-            
-            print(help)
-            
-            show.main_menu()
-          
-        else:
-            Error
-'''
+		#show.main_menu()
+		
+	elif inp == "2":
+		
+		dictionaries = vocab.trainer(dictionaries)
+		
+		#show.main_menu()
+		
+	elif inp == "3":
+		
+		grammar.grammar(dictionaries)
+		
+		#show.main_menu()
+		
+	elif inp == "4":
+		
+		mad.madlib(dictionaries)
+		
+		#show.main_menu()
+		
+	elif inp == "Stats":
+	
+		stats()
+		
+		#show.main_menu()
+		
+	elif inp == "Help":
+		
+		print("help")
+		
+		#show.main_menu()
+	  
+	else:
+		print("Error")
+
 
 #write to VocabFile
 load.update(dictionaries)
-#"Bye"
+print("Bye")

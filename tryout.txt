@@ -46,7 +46,7 @@ kommen, (verb), to come
 Krieg, (noun), war
 Kunst, (noun), art
 kurz, (adj.), short
-lang, (adj.), long
+lang, (adj.), long
 lassen, (verb), to let
 Lehrer, (noun), teacher
 lesen, (verb), to read
@@ -93,9 +93,8 @@ völlig, (adj.), complete
 wachsen, (verb), to grow
 Wasser, (noun), water
 wichtig, (adj.), important
-wissen, (verb), to know
+wissen, (verb), to know
 Wohnung, (noun), apartment
 wollen, (verb), to want
 Zeit, (noun), time
 Zukunft, (noun), future
-
