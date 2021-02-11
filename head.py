@@ -3,68 +3,52 @@ import dic as translate
 import vocab
 import madlibstwo as mad
 import grammar
+
 dictionaries = load.load()
-dict_de = dictionaries[0]
-dict_en = dictionaries[1]
 
 print("Begrüßung")
 print("------------")
-print("Main Menü")
+print("Main Menu")
 print("###################")
 
 inp = ""
 
-while inp != "Exit!":
-	
+while inp != "e":
+	    
 	inp = input()
 			
 	if inp == "1":
 		
-		word_input = input("Type in a word: ")
-		translation = translate.translate(str(word_input))
-		if translation[1] == "de":
-			print(word_input + " in English is " + translation[0])
-		elif translation[1] == "en":
-			print(word_input + " in German is " + translation[0])
-		else:
-			pass
-			
-		#show.main_menu()
-		
+		translate.translate(dictionaries)     # enter Dictionary-Module
+				
 	elif inp == "2":
 		
-		dictionaries = vocab.trainer(dictionaries)
-		
-		#show.main_menu()
+		dictionaries = vocab.trainer(dictionaries)  # enter Vocabulary-Module
 		
 	elif inp == "3":
 		
-		grammar.grammar(dictionaries)
-		
-		#show.main_menu()
+		grammar.grammar(dictionaries)   # enter Grammar-Module
 		
 	elif inp == "4":
 		
-		mad.madlib(dictionaries)
+		mad.madlib(dictionaries)    # enter MadLib-Module
 		
-		#show.main_menu()
+	elif inp == "5":
 		
-	elif inp == "Stats":
+		load.update(dictionaries)       
+		vocab.statistics(dictionaries)  #update statistics in statistics.csv
+		
+	elif inp == "i":
+		
+		print("Info")   # print information about the program and underlying processes
 	
-		stats()
+	elif inp == "m":
 		
-		#show.main_menu()
-		
-	elif inp == "Help":
-		
-		print("help")
-		
-		#show.main_menu()
-	  
+		print("Main Menu")    # print directions again
+	
 	else:
-		print("Error")
+		print("You can't do that here. Enter 'm' to see where you can go.")
 
 
-#write to VocabFile
-load.update(dictionaries)
+load.update(dictionaries)   #save progress to vocab.txt
 print("Bye")

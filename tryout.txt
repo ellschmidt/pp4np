@@ -1,7 +1,7 @@
 Abend, (noun), evening
 allgemein, (adj.), general
 alt, (adj.), old
-ändern, (verb), to change
+aendern, (verb), to change
 Angst, (noun), fear
 annehmen, (verb), to assume
 Auto, (noun), car
@@ -26,17 +26,17 @@ Form, (noun), shape
 Frage, (noun), question
 Frau, (noun), woman
 frei, (adj.), free
-früh, (adj.), early
+frueh, (adj.), early
 ganz, (adj.), whole
 geben, (verb), to give
 gehen, (verb), to go
 genau, (adj.), exact
-Gespräch, (noun), conversation
+Gespraech, (noun), conversation
 glauben, (verb), to believe
-groß, (adj.), big
+gross, (adj.), big
 gut, (adj.), good
 haben, (verb), to have
-häufig, (adj.), frequent
+haeufig, (adj.), frequent
 hoch, (adj.), high
 Interesse, (noun), interest
 Jahr, (noun), year
@@ -46,14 +46,14 @@ kommen, (verb), to come
 Krieg, (noun), war
 Kunst, (noun), art
 kurz, (adj.), short
-lang, (adj.), long
+lang, (adj.), long
 lassen, (verb), to let
 Lehrer, (noun), teacher
 lesen, (verb), to read
 Mann, (noun), man
 Mensch, (noun), human being
-mögen, (verb), to like
-möglich, (adj.), possible
+moegen, (verb), to like
+moeglich, (adj.), possible
 Morgen, (noun), morning
 Musik, (noun), music
 neu, (adj.), new
@@ -69,15 +69,15 @@ Rolle, (noun), role
 rund, (adj.), round
 sagen, (verb), to say
 schauen, (verb), to look
-schön, (adj.), beautiful
+schoen, (adj.), beautiful
 schreiben, (verb), to write
 Schritt, (noun), step
 schwierig, (adj.), difficult
 sehen, (verb), to see
-Sein, (verb), to be
+sein, (verb), to be
 sicher, (adj.), safe
 Sohn, (noun), son
-spät, (adj.), late
+spaet, (adj.), late
 Spiel, (noun), game
 spielen, (verb), to play
 stehen, (verb), to stand
@@ -86,10 +86,10 @@ Stimme, (noun), voice
 suchen, (verb), to search
 Tag, (noun), day
 Tisch, (noun), table
-Tür, (noun), door
+Tuer, (noun), door
 vergleichen, (verb), to compare
 verlassen, (verb), to leave
-völlig, (adj.), complete
+voellig, (adj.), complete
 wachsen, (verb), to grow
 Wasser, (noun), water
 wichtig, (adj.), important
